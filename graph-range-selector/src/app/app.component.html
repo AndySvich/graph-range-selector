@@ -1,0 +1,14 @@
+<div class="custom-body" fxLayout="column" fxLayoutAlign="space-evenly center" fxLayoutGap="20px" style="padding: 8rem;">
+
+  <div class="component-info">
+    <strong>Selected Dates: </strong><br>
+    From Date &nbsp;&nbsp;: {{graphStartDate}} <br>
+    To Date  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : {{graphEndDate}} <br>
+  </div>
+  
+  
+  <graph-range-selector [minDate]="graphMinimumDate" [maxDate]="graphMaximumDate" 
+    [showZoomLevels]="'1'" (startDate)="graphStartDateUpdated($event)" (endDate)="graphEndDateUpdated($event)">
+  </graph-range-selector>
+
+</div>

@@ -1,0 +1,21 @@
+.zoom-buttons-section div
+{
+    background: white;
+    border: 1px solid #ececec;
+    padding: 0.2rem;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.selected
+{
+    background: lightgray !important;
+}
+
+.graph-filter-section {
+    padding: 1rem;
+}
+
+.zoom-buttons-section {
+    padding: 1rem;
+}

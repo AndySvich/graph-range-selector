@@ -1,0 +1,24 @@
+<div class="graph-filter-section" fxLayout="row" fxLayoutAlign="space-between end" fxLayoutGap="30px">
+    <div *ngIf="showZoomLevels == true" class="zoom-buttons-section" fxLayout="row" fxLayoutGap="15px">
+        <div [class.selected]="selectedZoomButtonId==1" (click)="ZoomButtonClicked(1)">1 month</div>
+        <div [class.selected]="selectedZoomButtonId==2" (click)="ZoomButtonClicked(2)">3 month</div>
+        <div [class.selected]="selectedZoomButtonId==3" (click)="ZoomButtonClicked(3)">6 month</div>
+        <div [class.selected]="selectedZoomButtonId==4" (click)="ZoomButtonClicked(4)">1 year</div>
+        <div [class.selected]="selectedZoomButtonId==5" (click)="ZoomButtonClicked(5)">Current Year</div>
+        <div [class.selected]="selectedZoomButtonId==6" (click)="ZoomButtonClicked(6)">All</div>
+    </div>
+    <div class="date-picker-section" fxLayout="row" fxLayoutGap="15px">
+        <mat-form-field>
+            <mat-label>From Date</mat-label>
+            <input matInput [matDatepicker]="fromDate" placeholder="Live Before Date" autocomplete="off" [formControl]="fromDateSelected" (dateChange)="dateChanged()">
+            <mat-datepicker-toggle matSuffix [for]="fromDate"></mat-datepicker-toggle>
+            <mat-datepicker #fromDate></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>To Date</mat-label>
+            <input matInput [matDatepicker]="toDate" placeholder="Live Before Date" autocomplete="off" [formControl]="toDateSelected" (dateChange)="dateChanged()">
+            <mat-datepicker-toggle matSuffix [for]="toDate"></mat-datepicker-toggle>
+            <mat-datepicker #toDate></mat-datepicker>
+        </mat-form-field>
+    </div>
+</div>
